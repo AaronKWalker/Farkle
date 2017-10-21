@@ -1,5 +1,27 @@
-.flex-container {
-    display: -webkit-flex; /* Safari */
-    display: flex;
+body {
+    background-image: url(./images/pinkdust.png);
 }
 
+header {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-justify-content: center; /* Safari */
+    justify-content:         center;
+    width: 100%;
+    padding-bottom: 2%;
+    font-size: 6em;
+    color:#ff7039;
+    text-shadow: 2px 2px black;
+}
+
+main {
+    
+}
+
+.player-area {
+    
+}
+
+.score-box {
+    
+}
