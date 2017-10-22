@@ -27,7 +27,60 @@
 // dice from different rolls cannot be combined
 //------------------------------------------//
 
+
 //---------------[Variables]---------------//
+let numOfPlayers = 2; //NOTE: this value will come form an HTML input sometime in the future
+let dice = [1, 2, 3];
+
+
+// const player = {
+//     score: [0, 0],
+//     frakle: [0, 0],
+//     active: 0
+// };
+const player = new PlayerSetup(numOfPlayers);
+
+
+//---------------[Functions]---------------//
+function PlayerSetup(plNo){
+    this.score = [];
+    this.frakle = [];
+    this.active = 0;
+    this.fillIn = function(plNo){
+        for (var i = 0; i < plNo; i++) {
+            this.score.push(0);
+            this.frakle.push(0);
+        }
+    };
+    
+}
+
+function init(){
+    player.fillIn(numOfPlayers);
+    
+}
+
+
+let rando = function(){
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+function rollDice(rando){
+    dice.length = 0;
+    for (var i = 0; i < 6; i++) {
+        dice.push(rando());
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 //player scores are 0, player 1 is selected
 
@@ -36,3 +89,5 @@
 //player selects the dice to use for scoring
 
 //player either rolls again or passes to next player
+
+document.querySelector("#startBtn").addEventListener("click", init);

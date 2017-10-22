@@ -1,27 +1,26 @@
 body {
     background-image: url(./images/pinkdust.png);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr, 2fr, 1fr, 1fr, 1fr;
+    grid-gap: 1em;
 }
 
 header {
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    -webkit-justify-content: center; /* Safari */
-    justify-content:         center;
-    width: 100%;
-    padding-bottom: 2%;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
     font-size: 6em;
     color:#ff7039;
     text-shadow: 2px 2px black;
 }
 
-main {
-    
+#playerLanding {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
-.player-area {
-    
-}
-
-.score-box {
-    
-}
