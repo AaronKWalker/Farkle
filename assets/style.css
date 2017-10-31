@@ -2,7 +2,7 @@ body {
     background-image: url(./images/pinkdust.png);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr, 2fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 2fr, 1fr, 1fr;
     grid-gap: 1em;
     grid-auto-rows: minmax(100px, auto);
 }
@@ -18,63 +18,92 @@ header {
     text-shadow: 2px 2px black;
 }
 
-#playerArea {
+#player0 {
     grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#player1 {
+    grid-column-start: 5;
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 3;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: 1em;
-    grid-auto-rows: minmax(100px, auto);
 }
 
-.playerInfo {
+#controls {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+}
+
+.player {
     background-color: white;
     text-align: center;
+    border: 2px solid black;
+}
+
+.player h2 {
     color:#ff7039;
     text-shadow: 1px 1px black;
-    font-size: 2em;
+    font-size: 3em;
 }
 
-.playerInfo > div {
-    
-    background-color: #ff7039;
-    color: white;
-    margin: 2px;
+#rollCont {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
-#infoArea{
+#dice0 {
     grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#dice1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#dice2 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#dice3 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#dice4 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#dice5 {
+    grid-column-start: 7;
     grid-column-end: 8;
     grid-row-start: 3;
     grid-row-end: 4;
-    color:#ff7039;
-    text-shadow: 2px 2px black;
-    font-size: 3em;
-    text-align: center;
 }
 
-#numPlayers {
-    color: white;
-}
-
-#go {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: .5em;
-}
-
-.fa-check {
-    color: green;
-}
-
-.fa-check:hover {
-    color: rgb(6, 252, 6);
-}
-
-.fa-caret-left:hover, .fa-caret-right:hover {
-    color: white;
+#submitCont {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }

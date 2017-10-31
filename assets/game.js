@@ -29,22 +29,27 @@
 
 
 //---------------[Variables]---------------//
-let dice = [];
+let dice = {
+    num = [],
+    status = []
+};
+
+let playerData = {
+    points = [0,0],
+    farkle = [0,0]
+};
 
 
 //---------------[Functions]---------------//
-function PlayerSetup(plNo){
-    this.points = [];
-    this.frakle = [];
-    this.active = 0;
-}
-
 function init(){
-       
+    playerData.points= [0,0];
+    playerData.farkle = [0,0];
+    dice.status = [0, 0, 0, 0, 0, 0]; //0 = open, 1 = selected, 2 = hold
+    
 }
 
-function rollDice(rando){
-    dice.length = 0;
+function rollDice(){
+    dice.num.length = 0;
     for (var i = 0; i < 6; i++) {
         dice.push(Math.floor(Math.random() * 6) + 1);
     }
