@@ -107,3 +107,8 @@ header {
     grid-row-start: 3;
     grid-row-end: 4;
 }
+
+.die {
+    width: 160px;
+    height: 160px;
+}

@@ -30,19 +30,25 @@
 
 //---------------[Variables]---------------//
 let dice = {
-    num = [],
-    status = []
+    num: [],
+    status: []
 };
 
 let playerData = {
-    points = [0,0],
-    farkle = [0,0]
+    points: [0,0],
+    farkle: [0,0]
 };
 
+const dice0 = document.getElementById('dice0');
+const dice1 = document.getElementById('dice1');
+const dice2 = document.getElementById('dice2');
+const dice3 = document.getElementById('dice3');
+const dice4 = document.getElementById('dice4');
+const dice5 = document.getElementById('dice5');
 
 //---------------[Functions]---------------//
 function init(){
-    playerData.points= [0,0];
+    playerData.points = [0,0];
     playerData.farkle = [0,0];
     dice.status = [0, 0, 0, 0, 0, 0]; //0 = open, 1 = selected, 2 = hold
     
@@ -57,7 +63,7 @@ function rollDice(){
 
 
 
-
+//--------------[Event Listeners]--------------//
 
 
 
