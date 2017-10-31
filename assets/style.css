@@ -4,6 +4,7 @@ body {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 1fr, 2fr, 1fr, 1fr, 1fr;
     grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 header {
@@ -17,10 +18,63 @@ header {
     text-shadow: 2px 2px black;
 }
 
-#playerLanding {
-    grid-column-start: 1;
-    grid-column-end: 9;
+#playerArea {
+    grid-column-start: 2;
+    grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
 }
 
+.playerInfo {
+    background-color: white;
+    text-align: center;
+    color:#ff7039;
+    text-shadow: 1px 1px black;
+    font-size: 2em;
+}
+
+.playerInfo > div {
+    
+    background-color: #ff7039;
+    color: white;
+    margin: 2px;
+}
+
+#infoArea{
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    color:#ff7039;
+    text-shadow: 2px 2px black;
+    font-size: 3em;
+    text-align: center;
+}
+
+#numPlayers {
+    color: white;
+}
+
+#go {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: .5em;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-check:hover {
+    color: rgb(6, 252, 6);
+}
+
+.fa-caret-left:hover, .fa-caret-right:hover {
+    color: white;
+}
