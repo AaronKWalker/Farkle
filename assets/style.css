@@ -27,13 +27,24 @@ header {
 
 #player0 {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
 }
 
+#roundPointsArea {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+}
+
 #player1 {
-    grid-column-start: 5;
+    grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 2;
     grid-row-end: 3;
@@ -62,6 +73,11 @@ header {
 
 .player h2 {
     color:#ff7039;
+    text-shadow: 1px 1px black;
+    font-size: 3em;
+}
+
+#roundPointsArea h2 {
     text-shadow: 1px 1px black;
     font-size: 3em;
 }
@@ -125,4 +141,5 @@ header {
 .die {
     width: 160px;
     height: 160px;
+    border: 2px solid black;
 }

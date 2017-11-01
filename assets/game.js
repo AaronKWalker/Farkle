@@ -45,12 +45,7 @@ let playerData = {
     farkle: [0,0]
 };
 
-const dice0 = document.getElementById('dice0');
-const dice1 = document.getElementById('dice1');
-const dice2 = document.getElementById('dice2');
-const dice3 = document.getElementById('dice3');
-const dice4 = document.getElementById('dice4');
-const dice5 = document.getElementById('dice5');
+const roundPoints = document.getElementById('roundPoints');
 
 const p1Score = document.getElementById('player0score');
 const p2Score = document.getElementById('player1score');
@@ -63,7 +58,10 @@ function init(){
     dice.status = [0, 0, 0, 0, 0, 0]; //0 = open, 1 = selected, 2 = hold
     p1Score.textContent = 0;
     p2Score.textContent = 0;
-    
+    roundPoints.textContent = 0;
+    for (var i = 0; i < 6; i++) {
+        dice[i].src=`./assets/images/dice-${i + 1}.png`
+    }
 }
 
 function rollDice(){
@@ -79,7 +77,7 @@ function rollDice(){
 //--------------[Event Listeners]--------------//
 document.getElementById('rollBtn').addEventListener('click', rollDice);
 
-
+document.getElementById('newGameBtn').addEventListener('click', init);
 
 
 
