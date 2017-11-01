@@ -37,7 +37,13 @@ let dice = {
     2: document.getElementById('dice2'),
     3: document.getElementById('dice3'),
     4: document.getElementById('dice4'),
-    5: document.getElementById('dice5')
+    5: document.getElementById('dice5'),
+    6: document.getElementById('selectBtn0'),
+    7: document.getElementById('selectBtn1'),
+    8: document.getElementById('selectBtn2'),
+    9: document.getElementById('selectBtn3'),
+    10: document.getElementById('selectBtn4'),
+    11: document.getElementById('selectBtn5')
 };
 
 let playerData = {
@@ -62,6 +68,7 @@ function init(){
     for (var i = 0; i < 6; i++) {
         dice[i].src=`./assets/images/dice-${i + 1}.png`
     }
+    eListener();
 }
 
 function rollDice(){
@@ -72,6 +79,26 @@ function rollDice(){
     }
 }
 
+function eListener() {
+    for (var i = 6; i < 12; i++) {
+        dice[i].addEventListener('click', diceSelection)
+    }
+}
+
+function diceSelection(e){
+    console.log(this);
+    
+    console.log(parseInt(this.dataset.num)); 
+    let j = parseInt(this.dataset.num);
+    if (dice.status[j] === 1) {
+        dice.status[j] = 0;
+        this.classList.remove("selected");
+    } else {
+        dice.status[j] = 1;
+        this.classList.add("selected");
+    }
+    
+}
 
 
 //--------------[Event Listeners]--------------//
