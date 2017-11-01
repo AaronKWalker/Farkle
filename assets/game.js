@@ -31,7 +31,13 @@
 //---------------[Variables]---------------//
 let dice = {
     num: [],
-    status: []
+    status: [],
+    0: document.getElementById('dice0'),
+    1: document.getElementById('dice1'),
+    2: document.getElementById('dice2'),
+    3: document.getElementById('dice3'),
+    4: document.getElementById('dice4'),
+    5: document.getElementById('dice5')
 };
 
 let playerData = {
@@ -46,25 +52,32 @@ const dice3 = document.getElementById('dice3');
 const dice4 = document.getElementById('dice4');
 const dice5 = document.getElementById('dice5');
 
+const p1Score = document.getElementById('player0score');
+const p2Score = document.getElementById('player1score');
+
+
 //---------------[Functions]---------------//
 function init(){
     playerData.points = [0,0];
     playerData.farkle = [0,0];
     dice.status = [0, 0, 0, 0, 0, 0]; //0 = open, 1 = selected, 2 = hold
+    p1Score.textContent = 0;
+    p2Score.textContent = 0;
     
 }
 
 function rollDice(){
     dice.num.length = 0;
     for (var i = 0; i < 6; i++) {
-        dice.push(Math.floor(Math.random() * 6) + 1);
+        dice.num.push(Math.floor(Math.random() * 6) + 1);
+        dice[i].src=`./assets/images/dice-${dice.num[i]}.png`
     }
 }
 
 
 
 //--------------[Event Listeners]--------------//
-
+document.getElementById('rollBtn').addEventListener('click', rollDice);
 
 
 
@@ -80,3 +93,5 @@ function rollDice(){
 //player either rolls again or passes to next player
 
 // document.querySelector("#startBtn").addEventListener("click", startGame);
+
+init();
